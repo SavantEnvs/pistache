@@ -1,0 +1,9 @@
+project: savantenvs/pistache
+target: fuzz_parsers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_parsers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_parsers
+    libfuzzer: true
+    timeout: 5
